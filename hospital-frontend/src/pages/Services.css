@@ -1,0 +1,295 @@
+/* src/pages/Services.css */
+.services-page {
+    min-height: 100vh;
+}
+
+.services-hero {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 120px 0 80px;
+    text-align: center;
+}
+
+.services-hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+.services-hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    opacity: 0.9;
+}
+
+.services-filter {
+    padding: 40px 0;
+    background: var(--bg-light);
+}
+
+.filter-bar {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.search-box,
+.category-filter {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: white;
+    padding: 12px 16px;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    flex: 1;
+}
+
+.search-box input,
+.category-filter select {
+    border: none;
+    outline: none;
+    flex: 1;
+    font-size: 16px;
+    color: var(--text-dark);
+}
+
+.search-box svg,
+.category-filter svg {
+    color: var(--text-light);
+}
+
+.services-content {
+    padding: 80px 0;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.service-card {
+    background: white;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    border: 1px solid #e5e7eb;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary-color);
+}
+
+.service-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.service-icon {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.service-header h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin: 0;
+}
+
+.service-description {
+    color: var(--text-light);
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.service-features {
+    margin-bottom: 20px;
+}
+
+.service-features h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 12px;
+}
+
+.service-features ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.service-features li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 0;
+    color: var(--text-light);
+    font-size: 14px;
+}
+
+.service-features li svg {
+    color: var(--primary-color);
+    flex-shrink: 0;
+}
+
+.service-price {
+    background: var(--bg-light);
+    padding: 12px 16px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.service-price span {
+    font-weight: 600;
+    color: var(--primary-color);
+    font-size: 14px;
+}
+
+.service-actions {
+    display: flex;
+    gap: 12px;
+}
+
+.service-actions .btn {
+    flex: 1;
+    padding: 10px 16px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.no-results {
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--text-light);
+}
+
+.no-results p {
+    font-size: 1.1rem;
+}
+
+.emergency-section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #dc2626, #ef4444);
+    color: white;
+}
+
+.emergency-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 16px;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.emergency-card h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: white;
+}
+
+.emergency-card p {
+    font-size: 1.1rem;
+    margin-bottom: 24px;
+    opacity: 0.9;
+}
+
+.emergency-contact {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    font-size: 1.1rem;
+}
+
+.emergency-contact strong {
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .services-hero h1 {
+        font-size: 2rem;
+    }
+
+    .filter-bar {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .search-box,
+    .category-filter {
+        width: 100%;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .service-card {
+        padding: 20px;
+    }
+
+    .service-actions {
+        flex-direction: column;
+    }
+
+    .emergency-card {
+        padding: 30px 20px;
+    }
+
+    .emergency-card h2 {
+        font-size: 1.5rem;
+    }
+
+    .emergency-contact {
+        flex-direction: column;
+        gap: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .services-content {
+        padding: 60px 0;
+    }
+
+    .emergency-section {
+        padding: 60px 0;
+    }
+
+    .service-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .service-icon {
+        width: 50px;
+        height: 50px;
+    }
+}
